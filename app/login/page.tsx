@@ -1,6 +1,7 @@
 "use client";
 import React, { useCallback, useState } from "react";
 import { InputRenderer } from "../components/InputRenderer";
+import Link from "next/link";
 
 export default function Login() {
   const [loginForm, setLoginForm] = useState({
@@ -24,6 +25,11 @@ export default function Login() {
   }, []);
   return (
     <div className="w-full flex flex-col justify-center">
+      <Link href={"/"}>
+        <p className="px-3 py-2 bg-violet-400 w-max my-4 rounded-sm">
+          Go to Home
+        </p>
+      </Link>
       <h1 className="text-xl font-bold pb-3 text-blue-400">
         API Runner Dev Login
       </h1>
